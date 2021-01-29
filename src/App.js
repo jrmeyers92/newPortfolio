@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Nav from "./components/Nav";
+import AboutSkills from "./pages/AboutSkills";
+import Contact from "./pages/Contact";
+import Projects from "./pages/Projects";
+import { makeStyles } from "@material-ui/core/styles";
+import { Switch, Route } from "react-router-dom";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const useStyles = makeStyles({
+		app: {
+			height: "200vh",
+			margin: 0,
+		},
+	});
+	const classes = useStyles();
+
+	return (
+		<div className={classes.app}>
+			<Nav />
+			<Switch>
+				<Route from='/' exact></Route>
+
+				<Route path='/projects'>
+					<Projects />
+				</Route>
+				<Route path='/aboutskills'>
+					<AboutSkills />
+				</Route>
+				<Route path='/contact'>
+					<Contact />
+				</Route>
+			</Switch>
+		</div>
+	);
 }
 
 export default App;
