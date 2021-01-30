@@ -5,20 +5,19 @@ import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import { makeStyles } from "@material-ui/core/styles";
 import { Switch, Route } from "react-router-dom";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 function App() {
 	const useStyles = makeStyles({
 		app: {
-			height: "200vh",
 			margin: 0,
+			padding: 0,
 		},
 	});
 	const classes = useStyles();
 
 	return (
 		<div className={classes.app}>
-			<Nav />
+			<Nav className={classes.app} />
 			<Switch>
 				<Route from='/' exact></Route>
 

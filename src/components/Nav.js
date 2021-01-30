@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
 	root: {
 		flexGrow: 1,
 		margin: 0,
+		padding: 0,
 	},
 	menuButton: {
 		marginRight: theme.spacing(2),
@@ -31,6 +32,9 @@ const useStyles = makeStyles((theme) => ({
 		width: "100%",
 		flexGrow: 1,
 		justifyContent: "space-evenly",
+	},
+	button: {
+		color: "white",
 	},
 }));
 
@@ -121,7 +125,7 @@ const Nav = (props) => {
 								{menuItems.map((menuItem) => {
 									return (
 										<Button
-											variant='contained'
+											className={classes.button}
 											onClick={() => handleButtonClick(menuItem.pageURL)}>
 											{menuItem.menuTitle}
 										</Button>
