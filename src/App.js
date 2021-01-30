@@ -5,6 +5,7 @@ import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import { Switch, Route } from "react-router-dom";
 import "./App.css";
+import Footer from "./components/Footer";
 
 function App() {
 	return (
@@ -23,6 +24,7 @@ function App() {
 					<Contact />
 				</Route>
 			</Switch>
+			<Footer />
 		</div>
 	);
 }
