@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
 		margin: 0,
 		padding: 0,
 	},
+	appBar: {
+		margin: 0,
+	},
 	menuButton: {
 		marginRight: theme.spacing(2),
 	},
@@ -80,7 +83,7 @@ const Nav = (props) => {
 
 	return (
 		<div className={classes.root}>
-			<AppBar position='static'>
+			<AppBar position='static' className={classes.appBar}>
 				<Toolbar>
 					<Typography variant='h6' className={classes.title}>
 						Jake Meyers
