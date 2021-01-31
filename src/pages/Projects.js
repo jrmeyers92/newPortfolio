@@ -2,6 +2,9 @@ import { Typography, Grid } from "@material-ui/core";
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Cards from "../components/Cards";
+import RaftingPic from "../RaftingCompany.jpg";
+import CocktailAppPic from "../CocktailAppPic.png";
+import DoubleShotPic from "../DoubleShot.png";
 
 const useStyles = makeStyles(() => ({
 	projects: {
@@ -41,6 +44,7 @@ const Projects = () => {
 						and save items to a favorites list.'
 						website='https://reactcocktailapp.netlify.app'
 						github='https://github.com/jrmeyers92/react-cocktail-app'
+						pic={CocktailAppPic}
 					/>
 				</Grid>
 				<Grid item xs={12} sm={6} md={4}>
@@ -49,6 +53,7 @@ const Projects = () => {
 						description='Used React, React Router, Framer Motion and custom CSS to create a 4 page website for a cafe'
 						website='https://doubleshotcafe.netlify.app'
 						github='https://github.com/jrmeyers92/doubleshotCafe'
+						pic={DoubleShotPic}
 					/>
 				</Grid>
 				<Grid item xs={12} sm={6} md={4}>
@@ -57,6 +62,7 @@ const Projects = () => {
 						description='Used HTML, Sass, and Vanilla JavaScript to creat a landing page for a local Colorado rafting company.'
 						website='https://raftingcompany.netlify.app'
 						github='https://github.com/jrmeyers92/RaftingCompany'
+						pic={RaftingPic}
 					/>
 				</Grid>
 			</Grid>

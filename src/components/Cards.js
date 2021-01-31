@@ -9,11 +9,12 @@ import {
 	Card,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import RaftingPicture from "./RaftingCompany.jpg";
 
 const useStyles = makeStyles(() => ({
 	root: {
 		minWidth: 200,
-		height: 450,
+		height: 420,
 	},
 	media: {
 		height: 0,
@@ -24,15 +25,16 @@ const useStyles = makeStyles(() => ({
 	},
 }));
 
-const Cards = ({ title, description, website, github }) => {
+const Cards = ({ title, description, website, github, pic }) => {
 	const classes = useStyles();
 	return (
 		<Card className={classes.root}>
 			<CardActionArea>
 				<CardMedia
 					className={classes.media}
-					image='./RaftingCompany.jpg'
+					image={pic}
 					title='image'></CardMedia>
+
 				<CardContent>
 					<Typography variant='h5'>{title}</Typography>
 					<Typography variant='body2' color='textSecondary' component='p'>

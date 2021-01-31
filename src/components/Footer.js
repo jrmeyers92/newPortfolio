@@ -36,6 +36,9 @@ const useStyles = makeStyles({
 		alignItems: "center",
 		height: "100%",
 	},
+	anchor: {
+		color: "white",
+	},
 });
 
 const Footer = () => {
@@ -45,13 +48,29 @@ const Footer = () => {
 			<Grid container>
 				<Grid item className={classes.gridItem} xs={6}>
 					<IconButton className={classes.iconButton} color='inherit'>
-						<LinkedInIcon fontSize='large' />
+						<a
+							href='www.linkedin.com/in/jake-meyers-477b7a52'
+							target='_blank'
+							className={classes.anchor}>
+							<LinkedInIcon fontSize='large' />
+						</a>
 					</IconButton>
 					<IconButton color='inherit'>
-						<GitHubIcon fontSize='large' />
+						<a
+							href='https://github.com/jrmeyers92'
+							target='_blank'
+							className={classes.anchor}>
+							<GitHubIcon fontSize='large' />
+						</a>
 					</IconButton>
 					<IconButton color='inherit'>
-						<TwitterIcon fontSize='large' />
+						<a
+							href='https://twitter.com/jakemeyers92'
+							color='inherit'
+							target='_blank'
+							className={classes.anchor}>
+							<TwitterIcon fontSize='large' />
+						</a>
 					</IconButton>
 				</Grid>
 				<Grid item className={classes.gridItem2}>
