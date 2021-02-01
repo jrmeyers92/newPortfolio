@@ -9,7 +9,6 @@ import {
 	Card,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import RaftingPicture from "./RaftingCompany.jpg";
 
 const useStyles = makeStyles(() => ({
 	root: {

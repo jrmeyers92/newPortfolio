@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, IconButton, Typography } from "@material-ui/core";
+import { Grid, IconButton } from "@material-ui/core";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import TwitterIcon from "@material-ui/icons/Twitter";
@@ -46,7 +46,7 @@ const Footer = () => {
 	return (
 		<div className={classes.root}>
 			<Grid container>
-				<Grid item className={classes.gridItem} xs={6}>
+				<Grid item className={classes.gridItem} xs={12}>
 					<IconButton className={classes.iconButton} color='inherit'>
 						<a
 							href='www.linkedin.com/in/jake-meyers-477b7a52'
@@ -59,6 +59,7 @@ const Footer = () => {
 						<a
 							href='https://github.com/jrmeyers92'
 							target='_blank'
+							rel='noreferrer'
 							className={classes.anchor}>
 							<GitHubIcon fontSize='large' />
 						</a>
@@ -68,18 +69,11 @@ const Footer = () => {
 							href='https://twitter.com/jakemeyers92'
 							color='inherit'
 							target='_blank'
+							rel='noreferrer'
 							className={classes.anchor}>
 							<TwitterIcon fontSize='large' />
 						</a>
 					</IconButton>
-				</Grid>
-				<Grid item className={classes.gridItem2}>
-					<Typography>
-						<strong>Phone: </strong> 417-403-1570
-					</Typography>
-					<Typography>
-						<strong>Email: </strong> JakeRMeyers92@Gmail.com
-					</Typography>
 				</Grid>
 			</Grid>
 		</div>

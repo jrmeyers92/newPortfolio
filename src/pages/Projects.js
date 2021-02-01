@@ -32,7 +32,7 @@ const Projects = () => {
 	return (
 		<div className={classes.projects}>
 			<Typography variant='h5' align='center' className={classes.Typography}>
-				My Projects{" "}
+				My Projects
 			</Typography>
 
 			<Grid container spacing={4} className={classes.gridContainer}>
