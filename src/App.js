@@ -12,9 +12,7 @@ function App() {
 		<div>
 			<Nav />
 			<Switch>
-				<Route from='/' exact></Route>
-
-				<Route path='/projects'>
+				<Route path='/' exact>
 					<Projects />
 				</Route>
 				<Route path='/aboutskills'>

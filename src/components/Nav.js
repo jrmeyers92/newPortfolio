@@ -64,16 +64,12 @@ const Nav = (props) => {
 
 	const menuItems = [
 		{
-			menuTitle: "Home",
+			menuTitle: "Projects",
 			pageURL: "/",
 		},
 		{
 			menuTitle: "About Me",
 			pageURL: "/aboutskills",
-		},
-		{
-			menuTitle: "Projects",
-			pageURL: "/projects",
 		},
 		{
 			menuTitle: "Contact",

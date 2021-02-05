@@ -1,91 +1,67 @@
-import { Typography, Grid } from "@material-ui/core";
 import React from "react";
+import profilePic from "../profilephoto.jpeg";
 import { makeStyles } from "@material-ui/core/styles";
-import Picture from "../profilephoto.jpeg";
+import { Typography } from "@material-ui/core";
+import "./AboutSkills.css";
 
-const useStyles = makeStyles(() => ({
-	Header: {
-		paddingTop: "2rem",
-		marginBottom: "4rem",
+const useStyles = makeStyles((theme) => ({
+	AboutSkills: {
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
 	},
-	pic: {
-		borderRadius: 200,
-		width: 250,
-		marginLeft: "auto",
-		marginRight: "auto",
-		padding: "1rem",
-		marginTop: "1rem",
+	photo: {
+		borderRadius: "50%",
+		marginTop: 20,
+		height: 200,
+	},
+	content: {
+		margin: "0 3rem",
+		display: "flex",
+		alignItems: "center",
+	},
+	about: {
+		margin: "2rem",
+		fontSize: 17,
+		lineHeight: 1.2,
+		fontFamily: "roboto",
+	},
+	skills: {
+		margin: "2rem",
+		display: "flex",
 	},
 }));
 
 const AboutSkills = () => {
 	const classes = useStyles();
 	return (
-		<div>
-			<Typography variant='h5' align='center' className={classes.Header}>
-				About Me
-			</Typography>
-			<Grid
-				container
-				spacing={4}
-				style={{ paddingLeft: "50px", paddingRight: "50px" }}>
-				<Grid item container sm={12} md={4}>
-					<img src={Picture} className={classes.pic} alt='Jake Meyers' />
-					<Typography
-						variant='subtitle1'
-						component='h6'
-						style={{ display: "block" }}>
-						About
+		<div className={classes.AboutSkills}>
+			<img src={profilePic} alt='photo of me' className={classes.photo} />
+			<div className={classes.content}>
+				<div className={classes.about}>
+					<Typography variant='body1'>
+						Hello! I'm a Web Developer specalizing in the front-end. I have
+						strong HTML, CSS, and JavaScript Skills. On top of the basic
+						technologies, I have experience using React (plus common libraries
+						used in conjunction), Sass, and Git.
 					</Typography>
-					<Typography variant='body2' component='p'>
-						Hello! I'm a Web Developer specalizing in the Front End. I have
-						experience using HTML5, CSS3, JavaScript, React and more. I'm
-						constantly learning new skills and further honing the ones I have.
+					<br></br>
+					<Typography variant='body1'>
+						In my free time, I'm activily learning new skills and honing the
+						ones I already have. My top list of technologies to learn include,
+						Node.js, VIM, Web Scraping, but am open to learn any your company is
+						using!
 					</Typography>
-				</Grid>
-
-				<Grid item container sm={12} md={1}>
-					<Typography variant='subtitle1' component='h6'>
-						Technologies
-					</Typography>
-					<Grid style={{ display: "flex" }}>
-						<i
-							class='fab fa-html5'
-							style={{
-								fontSize: "50px",
-								color: " #e34c26",
-								padding: "20px",
-								paddingLeft: 0,
-							}}></i>
-
-						<i
-							class='fab fa-sass'
-							style={{
-								fontSize: "50px",
-								color: "#cc6699 ",
-								padding: "20px",
-							}}></i>
-						<i
-							class='fab fa-js-square'
-							style={{
-								fontSize: "50px",
-								color: "#f0db4f",
-								padding: "20px",
-							}}></i>
-
-						<i
-							class='fab fa-react'
-							style={{
-								fontSize: "50px",
-								color: "#61DBFB",
-								padding: "20px",
-							}}></i>
-						<i
-							class='fab fa-git'
-							style={{ fontSize: "50px", padding: "20px" }}></i>
-					</Grid>
-				</Grid>
-			</Grid>
+				</div>
+				<div className={classes.skills}>
+					<i class='fab fa-html5'></i>
+					<i class='fab fa-css3-alt'></i>
+					<i class='fab fa-js-square'></i>
+					<i class='fab fa-sass'></i>
+					<i class='fab fa-react'></i>
+					<i class='fab fa-git'></i>
+				</div>
+			</div>
 		</div>
 	);
 };

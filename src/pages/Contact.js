@@ -74,6 +74,9 @@ const Contact = () => {
 						<Button type='submit' variant='outlined' color='primary'>
 							Submit
 						</Button>
+					
+			
+
 					</form>
 				</Paper>
 			</Grid>
