@@ -36,10 +36,32 @@ const useStyles = makeStyles((theme) => ({
 		display: "Flex",
 		alignItems: "center",
 	},
+	rightArrow: {
+		cursor: "pointer",
+	},
+	leftArrow: {
+		cursor: "pointer",
+	},
 }));
 
 const AboutSkills = () => {
 	const classes = useStyles();
+	const slider = document.querySelector(".slider");
+
+	let sectionIndex = 0;
+
+	const rightClick = () => {
+		sectionIndex = sectionIndex > 4 ? (sectionIndex = 0) : (sectionIndex += 1);
+		// slider.style.transform = "translate(" + sectionIndex * "-25" + "%";
+		slider.style.transform = `translate(${sectionIndex * -15}% )`;
+	};
+
+	const leftClick = () => {
+		sectionIndex = sectionIndex > 0 ? (sectionIndex -= 1) : (sectionIndex = 5);
+		// slider.style.transform = "translate(" + sectionIndex * "-25" + "%";
+		slider.style.transform = `translate(${sectionIndex * -15}% )`;
+	};
+
 	return (
 		<div className={classes.AboutSkills}>
 			<img src={profilePic} alt='photo of me' className={classes.photo} />
@@ -67,16 +89,28 @@ const AboutSkills = () => {
 					</Typography>
 				</Grid>
 				<Grid className={classes.skills} item>
-					<ChevronLeftIcon />
-					<div>
-						<i class='fab fa-html5'></i>
-						<i class='fab fa-css3-alt'></i>
-						<i class='fab fa-js-square'></i>
-						<i class='fab fa-sass'></i>
-						<i class='fab fa-react'></i>
-						<i class='fab fa-git'></i>
+					<ChevronLeftIcon
+						fontSize='large'
+						className={classes.leftArrow}
+						class='leftArrow'
+						onClick={leftClick}
+					/>
+					<div className='carousel'>
+						<div className='slider'>
+							<i class='fab fa-html5'></i>
+							<i class='fab fa-css3-alt'></i>
+							<i class='fab fa-js-square'></i>
+							<i class='fab fa-sass'></i>
+							<i class='fab fa-react'></i>
+							<i class='fab fa-git'></i>
+						</div>
 					</div>
-					<ChevronRightIcon />
+					<ChevronRightIcon
+						fontSize='large'
+						className={classes.rightArrow}
+						class='rightArrow'
+						onClick={rightClick}
+					/>
 				</Grid>
 			</Grid>
 		</div>
