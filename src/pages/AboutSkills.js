@@ -3,6 +3,8 @@ import profilePic from "../profilephoto.jpeg";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Typography } from "@material-ui/core";
 import "./AboutSkills.css";
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
 const useStyles = makeStyles((theme) => ({
 	AboutSkills: {
@@ -31,6 +33,8 @@ const useStyles = makeStyles((theme) => ({
 		margin: "2rem",
 		display: "flex",
 		marginTop: "-2rem",
+		display: "Flex",
+		alignItems: "center",
 	},
 }));
 
@@ -63,12 +67,16 @@ const AboutSkills = () => {
 					</Typography>
 				</Grid>
 				<Grid className={classes.skills} item>
-					<i class='fab fa-html5'></i>
-					<i class='fab fa-css3-alt'></i>
-					<i class='fab fa-js-square'></i>
-					<i class='fab fa-sass'></i>
-					<i class='fab fa-react'></i>
-					<i class='fab fa-git'></i>
+					<ChevronLeftIcon />
+					<div>
+						<i class='fab fa-html5'></i>
+						<i class='fab fa-css3-alt'></i>
+						<i class='fab fa-js-square'></i>
+						<i class='fab fa-sass'></i>
+						<i class='fab fa-react'></i>
+						<i class='fab fa-git'></i>
+					</div>
+					<ChevronRightIcon />
 				</Grid>
 			</Grid>
 		</div>
