@@ -56,14 +56,16 @@ const Contact = () => {
 						name='contactJake'
 						method='post'
 						data-netlify='true'>
-						<input type='hidden' name='contactJake' value='contactJake' />
+						<input type='hidden' name='form-name' value='contactJake' />
 						<TextField
 							label='Name'
+							type='text'
 							required
 							name='name'
 							className={classes.textInput}></TextField>
 						<TextField
 							label='Email'
+							type='email'
 							required
 							name='email'
 							className={classes.textInput}></TextField>
