@@ -7,7 +7,7 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 
 const useStyles = makeStyles({
 	root: {
-		backgroundColor: "#3f51b5",
+		backgroundColor: "#659dbd",
 		height: "10vh",
 		width: "100vw",
 
