@@ -54,10 +54,9 @@ const Contact = () => {
 					<form
 						className={classes.form}
 						name='contactJake'
-						method='POST'
+						method='post'
 						data-netlify='true'>
-						<input type='hidden' name='contactPorfolioJake' value='contact' />
-						<input type='hidden' name='form-name' value='contact' />
+						<input type='hidden' name='contactJake' value='contactJake' />
 						<TextField
 							label='Name'
 							required

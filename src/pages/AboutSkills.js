@@ -37,8 +37,6 @@ const useStyles = makeStyles((theme) => ({
 	skills: {
 		margin: "2rem",
 		display: "flex",
-		marginTop: "-2rem",
-		display: "Flex",
 		alignItems: "center",
 		justifyContent: "center",
 		marginTop: "5rem",
@@ -67,7 +65,7 @@ const AboutSkills = () => {
 					md={6}
 					justify='center'
 					alignItems='center'>
-					<img src={profilePic} alt='photo of me' className={classes.photo} />
+					<img src={profilePic} alt='Jake Meyers' className={classes.photo} />
 					<Typography variant='body1'>
 						Hello! I'm a Web Developer specalizing in the front-end. I have
 						strong HTML, CSS, and JavaScript Skills. On top of the basic
