@@ -7,7 +7,11 @@ import TextareaAutosize from "@material-ui/core/TextareaAutosize";
 
 const useStyles = makeStyles(() => ({
 	grid: {
-		height: "100%",
+		minHeight: "83vh",
+		width: "100%",
+		display: "flex",
+		justifyContent: "center",
+		alignItems: "Center",
 	},
 	paper: {
 		padding: "2rem",
@@ -20,15 +24,14 @@ const useStyles = makeStyles(() => ({
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",
-		width: "50vw",
 	},
 	textArea: {
 		marginTop: "1rem",
 		marginBlock: "1rem",
-		width: "50%",
+		width: "100%",
 	},
 	textInput: {
-		width: "50%",
+		width: "100%",
 	},
 }));
 
@@ -36,24 +39,25 @@ const Contact = () => {
 	const classes = useStyles();
 	return (
 		<div className={classes.root}>
-			<Grid
-				xs={12}
-				sm={9}
-				md={6}
-				lg={12}
-				className={classes.grid}
-				container
-				justify='center'
-				alignItems='center'>
-				<Paper elevation={4} className={classes.paper}>
+			<Grid className={classes.grid} container>
+				<Grid
+					item
+					xs={12}
+					sm={9}
+					md={6}
+					component={Paper}
+					elevation={4}
+					className={classes.paper}>
 					<Typography variant='h5' align='center'>
-						Contact Me
+						Let's get in touch!
 					</Typography>
 					<form
 						className={classes.form}
-						name='contactPortfolio'
+						name='contactJake'
 						method='POST'
 						data-netlify='true'>
+						<input type='hidden' name='contactPorfolioJake' value='contact' />
+						<input type='hidden' name='form-name' value='contact' />
 						<TextField
 							label='Name'
 							required
@@ -70,15 +74,11 @@ const Contact = () => {
 							rowsMin={4}
 							name='message'
 							placeholder='Enter Message'></TextareaAutosize>
-
 						<Button type='submit' variant='outlined' color='primary'>
 							Submit
 						</Button>
-					
-			
-
 					</form>
-				</Paper>
+				</Grid>
 			</Grid>
 		</div>
 	);

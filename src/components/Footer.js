@@ -10,8 +10,7 @@ const useStyles = makeStyles({
 		backgroundColor: "#3f51b5",
 		height: "10vh",
 		width: "100vw",
-		position: "fixed",
-		bottom: 0,
+
 		color: "white",
 	},
 	gridItem: {

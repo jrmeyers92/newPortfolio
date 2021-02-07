@@ -1,8 +1,7 @@
 .fab {
-	font-size: 10rem;
+	font-size: 5rem;
 	position: relative;
-	margin: 1rem;
-	width: 12.5%;
+	margin: 0.5rem;
 }
 
 .fa-html5 {
@@ -23,19 +22,4 @@
 
 .fa-react {
 	color: #61dbfb;
-}
-
-.carousel {
-	min-height: 200px;
-	overflow: hidden;
-	width: 25vw;
-	position: relative;
-	height: 100%;
-}
-
-.slider {
-	height: 100%;
-	display: flex;
-	width: 400%;
-	transition: all 0.2s;
 }

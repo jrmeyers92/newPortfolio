@@ -3,24 +3,28 @@ import profilePic from "../profilephoto.jpeg";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Typography } from "@material-ui/core";
 import "./AboutSkills.css";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
 const useStyles = makeStyles((theme) => ({
 	AboutSkills: {
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",
+		minHeight: "83vh",
 	},
 	photo: {
 		borderRadius: "50%",
-		marginTop: 20,
+		marginTop: 10,
+		marginBottom: 20,
 		height: 200,
+		marginLeft: "50%",
+		transform: "translateX(-50%)",
 	},
 	content: {
-		margin: "0 3rem",
+		marginLeft: "3rem",
+		marginRight: "3rem",
 		display: "flex",
 		alignItems: "center",
+		justifyContent: "center",
 		width: "100%",
 	},
 	about: {
@@ -28,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
 		fontSize: 17,
 		lineHeight: 1.2,
 		fontFamily: "roboto",
+		marginBottom: "4rem",
 	},
 	skills: {
 		margin: "2rem",
@@ -35,36 +40,24 @@ const useStyles = makeStyles((theme) => ({
 		marginTop: "-2rem",
 		display: "Flex",
 		alignItems: "center",
+		justifyContent: "center",
+		marginTop: "5rem",
+
+		"@media (max-width: 1345px)": {
+			marginTop: 0,
+		},
 	},
-	rightArrow: {
-		cursor: "pointer",
-	},
-	leftArrow: {
-		cursor: "pointer",
+
+	technologies: {
+		display: "flex",
+		flexWrap: "wrap",
 	},
 }));
 
 const AboutSkills = () => {
 	const classes = useStyles();
-	const slider = document.querySelector(".slider");
-
-	let sectionIndex = 0;
-
-	const rightClick = () => {
-		sectionIndex = sectionIndex > 4 ? (sectionIndex = 0) : (sectionIndex += 1);
-		// slider.style.transform = "translate(" + sectionIndex * "-25" + "%";
-		slider.style.transform = `translate(${sectionIndex * -15}% )`;
-	};
-
-	const leftClick = () => {
-		sectionIndex = sectionIndex > 0 ? (sectionIndex -= 1) : (sectionIndex = 5);
-		// slider.style.transform = "translate(" + sectionIndex * "-25" + "%";
-		slider.style.transform = `translate(${sectionIndex * -15}% )`;
-	};
-
 	return (
 		<div className={classes.AboutSkills}>
-			<img src={profilePic} alt='photo of me' className={classes.photo} />
 			<Grid className={classes.content} container>
 				<Grid
 					className={classes.about}
@@ -74,6 +67,7 @@ const AboutSkills = () => {
 					md={6}
 					justify='center'
 					alignItems='center'>
+					<img src={profilePic} alt='photo of me' className={classes.photo} />
 					<Typography variant='body1'>
 						Hello! I'm a Web Developer specalizing in the front-end. I have
 						strong HTML, CSS, and JavaScript Skills. On top of the basic
@@ -84,33 +78,19 @@ const AboutSkills = () => {
 					<Typography variant='body1'>
 						In my free time, I'm activily learning new skills and honing the
 						ones I already have. My top list of technologies to learn include,
-						Node.js, VIM, Web Scraping, but am open to learn any your company is
-						using!
+						Node.js, VIM, Web Scraping, but am open to learn anything your
+						company is using!
 					</Typography>
 				</Grid>
 				<Grid className={classes.skills} item>
-					<ChevronLeftIcon
-						fontSize='large'
-						className={classes.leftArrow}
-						class='leftArrow'
-						onClick={leftClick}
-					/>
-					<div className='carousel'>
-						<div className='slider'>
-							<i class='fab fa-html5'></i>
-							<i class='fab fa-css3-alt'></i>
-							<i class='fab fa-js-square'></i>
-							<i class='fab fa-sass'></i>
-							<i class='fab fa-react'></i>
-							<i class='fab fa-git'></i>
-						</div>
+					<div className='technologies'>
+						<i class='fab fa-html5'></i>
+						<i class='fab fa-css3-alt'></i>
+						<i class='fab fa-js-square'></i>
+						<i class='fab fa-sass'></i>
+						<i class='fab fa-react'></i>
+						<i class='fab fa-git'></i>
 					</div>
-					<ChevronRightIcon
-						fontSize='large'
-						className={classes.rightArrow}
-						class='rightArrow'
-						onClick={rightClick}
-					/>
 				</Grid>
 			</Grid>
 		</div>

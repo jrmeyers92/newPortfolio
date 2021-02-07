@@ -8,7 +8,7 @@ import DoubleShotPic from "../DoubleShot.png";
 
 const useStyles = makeStyles(() => ({
 	projects: {
-		height: "100vh",
+		minHeight: "83vh",
 		width: "100%",
 		background: "#F0F0F0",
 	},
