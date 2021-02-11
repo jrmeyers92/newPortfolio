@@ -48,8 +48,9 @@ const Footer = () => {
 				<Grid item className={classes.gridItem} xs={12}>
 					<IconButton className={classes.iconButton} color='inherit'>
 						<a
-							href='www.linkedin.com/in/jake-meyers-477b7a52'
+							href='https://www.linkedin.com/in/jake-meyers-477b7a52'
 							target='_blank'
+							rel='noreferrer'
 							className={classes.anchor}>
 							<LinkedInIcon fontSize='large' />
 						</a>

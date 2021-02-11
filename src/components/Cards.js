@@ -13,7 +13,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles(() => ({
 	root: {
 		minWidth: 200,
-		height: 420,
+		minHeight: 390,
 	},
 	media: {
 		height: 0,
